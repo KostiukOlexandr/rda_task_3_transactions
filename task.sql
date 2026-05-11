@@ -1,11 +1,7 @@
 
-USE ShopDB; 
+USE ShopDB;
 
 START TRANSACTION;
-
-
-INSERT INTO Orders (CustomerID, Date)
-VALUES (1, '2023-01-01');
 
 
 INSERT INTO OrderItems (OrderID, ProductID, Count)
@@ -18,6 +14,6 @@ WHERE ID = 1;
 
 COMMIT;
 
-SELECT * FROM Orders;
-SELECT * FROM OrderItems;
-SELECT * FROM Products;
+
+INSERT INTO Orders (CustomerID, Date)
+VALUES (1, '2023-01-01');
